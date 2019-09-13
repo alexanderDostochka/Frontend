@@ -1,6 +1,8 @@
 const colors = {
     white: '#fff',
-    black: '#000'
+    black: '#000',
+    silver: '#eaeaea',
+    darkgrey: '#A9A9A9'
 };
 
 const content = {
