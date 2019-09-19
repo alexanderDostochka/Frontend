@@ -1,3 +1,4 @@
+// colors
 const colors = {
     white: '#fff',
     black: '#000',
@@ -5,6 +6,7 @@ const colors = {
     darkgrey: '#A9A9A9'
 };
 
+// content sizes
 const content = {
     large: 15,
     medium: 30,
@@ -13,6 +15,7 @@ const content = {
     tiny: 80
 };
 
+// typographies 
 const fontSizes = {
     h1: 38,
     h2: 28,
@@ -21,8 +24,17 @@ const fontSizes = {
     caption: 12
 };
 
+const lineHeight = {
+    h1: 56,
+    h2: 32,
+    h3: 28,
+    body: 22,
+    caption: 18
+};
+
 export default {
+    colors,
     content,
     fontSizes,
-    colors
+    lineHeight
 };
