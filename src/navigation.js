@@ -5,10 +5,10 @@ import { Image } from 'react-native';
 import variables from './constants/style-variables';
 
 // screens
-import Main from './screens/Main';
+import Doc from './screens/Doc';
 
 const navigation = createStackNavigator({
-    Main
+    Doc
 }, {
     defaultNavigationOptions: {
         headerStyle: {
