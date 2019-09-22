@@ -6,6 +6,11 @@ const colors = {
     darkgrey: '#A9A9A9'
 };
 
+// backgrounds
+const backgrounds = {
+    silver: '#faf1f1'
+};
+
 // content sizes
 const content = {
     large: 15,
@@ -34,7 +39,8 @@ const lineHeight = {
 
 export default {
     colors,
+    backgrounds,
     content,
     fontSizes,
-    lineHeight
+    lineHeight,
 };
