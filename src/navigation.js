@@ -1,14 +1,16 @@
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack'
-import { Image } from 'react-native';
+import { createAppContainer, View } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import Image from './components/Image';
 import variables from './constants/style-variables';
 
 // screens
-import Doc from './screens/Doc';
+import Categories from './screens/Categories';
+import Docs from './screens/Docs';
 
 const navigation = createStackNavigator({
-    Doc
+    Categories,
+    Docs
 }, {
     defaultNavigationOptions: {
         headerStyle: {
@@ -17,11 +19,8 @@ const navigation = createStackNavigator({
             borderBottomWidth: 0.3,
             borderColor: variables.colors.silver
         },
-        headerBackImage: <Image />,
+        headerBackImage: <Image style={{ width: 20, height: 20 }} name="back" />,
         headerBackTitle: null,
-        headerLeftContainerStyle: {
-            paddingLeft: variables.content.large
-        },
         headerRightContainerStyle: {
             justifyContent: 'flex-end',
             width: '100%',
