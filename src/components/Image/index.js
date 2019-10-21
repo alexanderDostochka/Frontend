@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Image } from 'react-native';
-import images from '../../constants/images';
+import { baseURL } from '../../constants/api';
 
-const ImageCustom = React.memo(({ name, style }) => (
-    <Image style={ style } source={ images[name] } />
+const ImageCustom = React.memo(({ path, style }) => (
+    <Image style={ style } source={{uri: `${baseURL}/${path}` }} />
 ));
 
 ImageCustom.propTypes = {
-    name: PropTypes.string
+    path: PropTypes.string
 }
 
 ImageCustom.defaultProps = {
-    name: ""
+    path: ""
 }
 
 export default ImageCustom;
