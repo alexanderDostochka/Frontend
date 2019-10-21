@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import variables from '../../constants/style-variables';
 
 const Content = props => {
-    const { children, type, margin } = props;
+    const { children, type, margin, spaceEvenly } = props;
     
     const contentStyle = [
         {
@@ -16,6 +16,11 @@ const Content = props => {
         {
             paddingLeft: variables.content[type],
             paddingRight: variables.content[type],
+        },
+        spaceEvenly && {
+            justifyContent: 'space-between',
+            flexDirection: 'row',
+            alignItems: 'center'
         }
     ];
 
@@ -28,12 +33,14 @@ const Content = props => {
 
 Content.propTypes = {
     type: PropTypes.string,
-    margin: PropTypes.array
+    margin: PropTypes.array,
+    spaceEvenly: PropTypes.bool
 }
 
 Content.defaultProps = {
     type: "",
-    margin: []
+    margin: [],
+    spaceEvenly: false
 }
 
 export default Content;
