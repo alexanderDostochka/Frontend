@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import Image from '../Image';
 import Text from '../Text';
 import variables from '../../constants/style-variables';
 
-const Category = React.memo(({ title, type }) => {
+const Category = React.memo(({ title, image, sort }) => {
+    const { width } = Dimensions.get('window');
+    const itemWidth = (width - 50) / 3;
 
     return (
-        <View style={ styles.block }>
-            <View style={ styles.content }>
-                <Image style={ styles.image } name={ type } />
+        <View style={ [sort ? styles.block : { minWidth: itemWidth, maxWidth: itemWidth }] }>
+            <View style={ [sort && { flexDirection: 'row' },{alignItems: 'center'}, {...styles.content}] }>
+                <Image style={ styles.image } path={ image } />
                 <Text size="body"> { title } </Text>
             </View>
         </View>
@@ -19,10 +21,10 @@ const Category = React.memo(({ title, type }) => {
 
 const styles = StyleSheet.create({
     block: {
-        width: 120
+        minWidth: '100%',
+        minWidth: '100%',
     },
     content: {
-        alignItems: 'center',
         padding: 12,
         borderRadius: 6,
         backgroundColor: variables.backgrounds.silver
@@ -36,12 +38,14 @@ const styles = StyleSheet.create({
 
 Category.propTypes = {
     title: PropTypes.string,
-    type: PropTypes.string
+    image: PropTypes.string,
+    sort: PropTypes.bool
 }
 
 Category.defaultProps = {
     title: "",
-    type: ""
+    image: "",
+    sort: false
 }
 
 export default Category;
