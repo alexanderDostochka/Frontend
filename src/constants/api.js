@@ -1,0 +1,1 @@
+export const baseURL = 'http://134.249.87.20:7777';
