@@ -1,22 +1,7 @@
 export const lang = {
-    search: 'Search...'
+    search: 'Search...',
+    no_internet_connection: 'No internet connection',
+    docs: 'Frontend documentation',
+    categories: 'Categories',
+    taken_information: 'Information taken from https://reactjs.org'
 };
-
-export const categories = [
-    {
-        type: 'react',
-        title: 'ReactJS'
-    },
-    {
-        type: 'angular',
-        title: 'Angular'
-    },
-    {
-        type: 'vue',
-        title: 'Vue'
-    },
-    {
-        type: 'js',
-        title: 'JS'
-    }
-];
