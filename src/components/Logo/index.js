@@ -13,7 +13,7 @@ const Logo = React.memo(({ title, image, padding }) => {
 
     return (
         <View style={ logoStyle }>
-            <Image style={ styles.image } name={ image } />
+            <Image style={ styles.image } path={ image } />
             <Text> { title } </Text>
         </View>
     );
@@ -36,13 +36,13 @@ const styles = StyleSheet.create({
 Logo.propTypes = {
     padding: PropTypes.bool,
     title: PropTypes.string,
-    img: PropTypes.string,
+    image: PropTypes.string,
 }
 
 Logo.defaultProps = {
     padding: true,
     title: "",
-    img: "",
+    image: "js.png",
 }
 
 
