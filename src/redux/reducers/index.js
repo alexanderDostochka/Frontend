@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux'
-
-import test from './test';
+import categories from '../reducers/categories';
+import docs from '../reducers/docs';
+import doc from '../reducers/doc';
 
 export default combineReducers({
-    test
+    categories,
+    docs,
+    doc
 });
