@@ -3,12 +3,14 @@ const colors = {
     white: '#fff',
     black: '#000',
     silver: '#eaeaea',
-    darkgrey: '#A9A9A9'
+    darkgrey: '#A9A9A9',
+    grey: '#5c5b5b'
 };
 
 // backgrounds
 const backgrounds = {
-    silver: '#faf1f1'
+    silver: '#faf1f1',
+    danger: '#dc3545'
 };
 
 // content sizes
